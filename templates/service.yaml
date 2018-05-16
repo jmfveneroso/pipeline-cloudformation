@@ -109,7 +109,7 @@ Resources:
               awslogs-group: !Ref LogGroup
               awslogs-stream-prefix: !Ref AWS::StackName
           Command:
-            - bash start.sh
+            - /bin/sh start.sh
         - Name: postgres
           Image: postgres
           Essential: true

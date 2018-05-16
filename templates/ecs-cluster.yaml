@@ -163,6 +163,8 @@ Resources:
       ImageId: !FindInMap [ AWSRegionToAMI, !Ref "AWS::Region", AMI ]
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !Ref InstanceProfile
+      AssociatePublicIpAddress: true
+      KeyName: Default
       SecurityGroups:
         - !Ref SecurityGroup
       UserData:
