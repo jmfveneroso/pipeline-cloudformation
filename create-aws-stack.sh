@@ -19,5 +19,5 @@ done
 
 aws cloudformation create-stack --stack-name website --template-body file://templates/main.yaml \
   --capabilities CAPABILITY_IAM --disable-rollback --parameters \
-  ParameterKey=GitHubUser,ParameterValue=jmfveneroso \
-  ParameterKey=GitHubToken,ParameterValue=0dd44f2e51d919098f6fc30f0f26e17e6b9d77a2
+  ParameterKey=GitHubUser,ParameterValue=$GITHUB_USER \
+  ParameterKey=GitHubToken,ParameterValue=$GITHUB_KEY
