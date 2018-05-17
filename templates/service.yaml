@@ -102,20 +102,20 @@ Resources:
           Memory: 256
           PortMappings:
             - ContainerPort: 80
+              HostPort: 80
           LogConfiguration:
             LogDriver: awslogs
             Options:
               awslogs-region: !Ref AWS::Region
               awslogs-group: !Ref LogGroup
               awslogs-stream-prefix: !Ref AWS::StackName
-          Command:
-            - /bin/sh start.sh
         - Name: postgres
           Image: postgres
           Essential: true
           Memory: 256
           PortMappings:
             - ContainerPort: 5432
+              HostPort: 5432
           MountPoints:
             - SourceVolume: db-vol
               ContainerPath: /var/lib/postgresql/data/
