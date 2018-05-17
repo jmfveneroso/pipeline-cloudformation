@@ -103,6 +103,8 @@ Resources:
           PortMappings:
             - ContainerPort: 80
               HostPort: 80
+          Links:
+            - postgres:db
           LogConfiguration:
             LogDriver: awslogs
             Options:
